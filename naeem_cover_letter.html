@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter - Naeem Khan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --text-dark: #333;
+            --text-gray: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--primary-color);
+        }
+
+        .header p {
+            margin: 5px 0;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .date {
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .recipient {
+            margin-bottom: 30px;
+        }
+
+        .subject {
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .signature {
+            margin-top: 50px;
+        }
+
+        .signature p {
+            margin: 5px 0;
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+
+            body {
+                padding: 0;
+                background: #fff;
+            }
+
+            .letter-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .letter-container {
+                padding: 30px;
+            }
+
+            .download-btn {
+                position: static;
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="download-btn" onclick="window.print()">Download as PDF</button>
+
+    <div class="letter-container">
+        <div class="header">
+            <h1>Naeem Khan</h1>
+            <p>Senior WordPress Plugin Developer</p>
+            <p>Email: naeemkhan.cse@gmail.com | Phone: +880-1768628825</p>
+            <p>Portfolio: naeemkhan25.github.io | GitHub: naeemkhan25</p>
+        </div>
+
+        <div class="date">
+            Date: April 09, 2026
+        </div>
+
+        <div class="recipient">
+            <strong>To,</strong><br>
+            The Hiring Manager,<br>
+            Recruitment Department
+        </div>
+
+        <div class="subject">
+            Subject: Application for the position of WordPress Plugin Developer
+        </div>
+
+        <div class="content">
+            <p>Dear Hiring Manager,</p>
+
+            <p>I am writing to express my enthusiastic interest in the <strong>WordPress Plugin
+                    Developer</strong> position. With a career spanning over 4 years at **WPPOOL**, and successful
+                collaborations with international firms like **Pilar (Finland)** and **BluePi Solutions**, I have
+                developed a deep expertise in building high-performance, enterprise-scale WordPress solutions.</p>
+
+            <p>Throughout my career, I have specialized in core plugin architecture. I contributed to the development of
+                global products like <strong>FlexStock</strong> (a real-time WooCommerce stock sync hub) and
+                <strong>Easy to Manage Vendor</strong>. My work often involves solving complex technical challenges,
+                such as implementing the <strong>ERA API</strong> for secure health data synchronization with the
+                Finnish Government servers.
+            </p>
+
+            <p>In addition to traditional development, I am heavily invested in <strong>Agentic AI Technology</strong>.
+                I actively use <strong>Antigravity AI Agent</strong> and <strong>Cursor AI</strong> for architectural
+                planning and building autonomous AI agents that interact with web environments and complex databases. I
+                have also designed custom SaaS ecosystems to manage product licenses and automated AI chat credit
+                systems.</p>
+
+            <p>I am confident that my blend of deep WordPress knowledge, API integration expertise, and forward-thinking
+                AI implementation makes me a strong candidate for your team. I am eager to bring my technical leadership
+                and problem-solving skills to your organization.</p>
+
+            <p>Thank you for considering my application. I have attached my resume for your review and look forward to
+                the possibility of discussing how my background can contribute to your projects.</p>
+        </div>
+
+        <div class="signature">
+            <p>Sincerely,</p>
+            <br>
+            <strong>Naeem Khan</strong><br>
+            Senior WordPress Plugin Developer
+        </div>
+    </div>
+
+</body>
+
+</html>
