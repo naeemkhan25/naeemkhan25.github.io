@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Naeem Khan - Senior WordPress Plugin Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-dark: #2d3436;
+            --text-gray: #636e72;
+            --bg-light: #f8f9fa;
+            --border-color: #dfe6e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: #fff;
+            padding: 40px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            background: #fff;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-content h2 {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-gray);
+            margin-top: 5px;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .item-org {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .item-date {
+            font-size: 13px;
+            color: var(--text-gray);
+            font-style: italic;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-list {
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .skill-list li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .portfolio-list {
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .portfolio-list li {
+            margin-bottom: 8px;
+        }
+
+        .portfolio-list strong {
+            color: var(--text-dark);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 11px;
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+
+        .ai-expertise {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .ai-expertise p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #004494;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            .no-print,
+            .download-btn {
+                display: none;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border: none;
+                padding: 20px;
+            }
+
+            section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            .experience-item,
+            .education-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+
+        /* Manual Page Break Class */
+        .page-break {
+            page-break-before: always;
+            break-before: always;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="./js/cv-naeem.pdf" download="Naeem_Khan_CV.pdf" class="download-btn">Download Resume (PDF)</a>
+
+    <div class="cv-container">
+        <header>
+            <div class="header-content">
+                <h1>Naeem Khan</h1>
+                <h2>Senior WordPress Plugin Developer</h2>
+                <p style="font-size: 14px; color: var(--text-gray); max-width: 500px; margin-top: 10px;">
+                    Expert in building high-performance WordPress plugins, enterprise SaaS ecosystems, and complex API
+                    integrations. Specialized in AI-driven development and autonomous agentic workflows.
+                </p>
+            </div>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +880-1768628825</p>
+                <p><strong>Email:</strong> <a href="mailto:naeemkhan.cse@gmail.com">naeemkhan.cse@gmail.com</a></p>
+                <p><strong>Portfolio:</strong> <a href="https://naeemkhan25.github.io/">naeemkhan25.github.io</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/naeemkhan25">naeemkhan25</a></p>
+                <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+            </div>
+        </header>
+
+        <section>
+            <h3>Core Expertise & AI Technology</h3>
+            <div class="ai-expertise">
+                <p><strong>Advanced Agentic Coding:</strong> Currently utilizing <strong>Antigravity AI Agent</strong>
+                    for high-level architectural planning and complex system builds.</p>
+                <p><strong>AI Tools:</strong> Extensive experience with <strong>Cursor AI</strong> and autonomous
+                    <strong>AI Agents</strong> for web intelligence and API automation.
+                </p>
+                <p><strong>Specialization:</strong> Full-stack WordPress development (PHP, JS), SaaS infrastructure, and
+                    custom license/credit management systems.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Professional Experience</h3>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <span class="item-title">Senior WordPress Plugin Developer</span> @ <span
+                            class="item-org">WPPOOL</span>
+                    </div>
+                    <span class="item-date">4 Years (Current)</span>
+                </div>
+                <p class="item-description">Leading the development of high-impact WordPress plugins and enterprise
+                    solutions. Responsible for core architecture, performance optimization, and global feature sync
+                    systems.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <span class="item-title">Senior WordPress Developer</span> @ <span class="item-org">BluePi
+                            Solutions</span>
+                    </div>
+                    <span class="item-date">5 Months (Active Collaboration)</span>
+                </div>
+                <p class="item-description">Specialized in deep technical analysis and core plugin architecture for
+                    international clients.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <span class="item-title">WordPress & API Developer</span> @ <span class="item-org">Pilar
+                            (Finland)</span>
+                    </div>
+                    <span class="item-date">1.5 Years</span>
+                </div>
+                <p class="item-description">Developed high-performance digital healthcare solutions. Lead the
+                    <strong>ERA API Integration</strong> for medical prescriptions and lab reports, ensuring secure data
+                    sync with Finnish Government (Kanta) servers.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-break">
+            <h3>Professional Plugin Portfolio & Products</h3>
+            <ul class="portfolio-list">
+                <li><span class="badge">Enterprise</span> <strong>FlexStock:</strong> 2-Way real-time Stock Sync with
+                    Google Sheets for WooCommerce (Trusted by thousands globally).</li>
+                <li><span class="badge">SaaS</span> <strong>Smart AI Chat SaaS Ecosystem:</strong> Full custom build for
+                    license management, usage tracking, and automated AI chat credit management.</li>
+                <li><span class="badge">Marketplace</span> <strong>Easy to Manage Vendor:</strong> Comprehensive
+                    multi-vendor marketplace management system.</li>
+                <li><span class="badge">Plugin</span> <strong>FlexOrder:</strong> Scalable WooCommerce order management
+                    via Google Sheets.</li>
+                <li><span class="badge">B2B</span> <strong>Quotation Manager for WooCommerce:</strong> Advanced pricing
+                    and custom quote management system.</li>
+                <li><span class="badge">Utility</span> <strong>Back in Stock Notifier:</strong> Real-time inventory
+                    alerts for WooCommerce shoppers.</li>
+                <li><span class="badge">Doc</span> <strong>Sheets To WP Table Live Sync:</strong> Successfully developed
+                    comprehensive technical and developer documentation for global enterprise users.</li>
+                <li><span class="badge">Doc</span> <strong>WP Dark Mode:</strong> Created developer documentation and
+                    technical guides for one of the world's leading dark mode plugins.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Custom & Private Client Plugins</h3>
+            <ul class="portfolio-list">
+                <li><strong>Pathao Courier Integration</strong> – Specialized logistics bridging for high-volume
+                    delivery.</li>
+                <li><strong>Quick Cash on Delivery (COD)</strong> – Advanced checkout workflow optimization.</li>
+                <li><strong>Gold Price Prediction Plugin</strong> – Fintech solution for real-time market analytics.
+                </li>
+                <li><strong>Bulk Add to Cart (Wholesale)</strong> – Enterprise B2B wholesale management suite.</li>
+                <li><strong>WhatsApp & SMS API Suite</strong> – Multi-channel customer notification infrastructure.</li>
+                <li><strong>Custom Google Sheets Sync</strong> – Bespoke data piping for specialized enterprise
+                    workflows.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Live Client Implementations & Websites</h3>
+            <ul class="portfolio-list">
+                <li><strong>Sydan24 (Finland):</strong> Lead architect for high-performance medical prescription and lab
+                    report platform.</li>
+                <li><strong>MyRobD Ecosystem:</strong> Full implementation of Pathao Courier and Quick Cash on Delivery
+                    (COD) for national e-commerce delivery.</li>
+                <li><strong>HoloForex:</strong> Advanced fintech platform with Gold Price Prediction and foreign
+                    exchange analytics.</li>
+                <li><strong>RapidMeds (UK):</strong> Professional healthcare and pharmaceutical solutions platform.</li>
+                <li><strong>Cycle Norway / Cora Refinish:</strong> High-performance tourism and industrial service
+                    portals.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <ul class="skill-list">
+                    <li><strong>Languages:</strong> PHP, JavaScript (ES6+), React, C, HTML5, CSS3</li>
+                    <li><strong>Frameworks:</strong> Laravel, WordPress (Plugin/Theme Architecture)</li>
+                    <li><strong>Databases:</strong> MySQL</li>
+                </ul>
+                <ul class="skill-list">
+                    <li><strong>Tools:</strong> Git, GitHub, JIRA, Antigravity AI, Cursor</li>
+                    <li><strong>Specialties:</strong> REST API, AJAX, B2B Wholesales, SaaS License Systems</li>
+                    <li><strong>Cloud:</strong> Google Sheets API Integration, Service Accounts</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Education & Awards</h3>
+            <div class="education-item">
+                <div class="item-header">
+                    <span class="item-title">BSc in Computer Science & Engineering</span>
+                    <span class="item-date">Studying</span>
+                </div>
+                <div class="item-org">Green University of Bangladesh</div>
+                <p class="item-description">Recipient of <strong>VC's Award (GPA 4/4)</strong> and <strong>Dean's Award
+                        (GPA 3.85/4)</strong>.</p>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <span class="item-title">Diploma in Engineering (Computer Technology)</span>
+                    <span class="item-date">2014 – 2018</span>
+                </div>
+                <div class="item-org">Pabna Polytechnic Institute</div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
